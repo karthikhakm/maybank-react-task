@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import SearchBar from './components/SearchBar';
+import Map from './components/Map';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Row className="my-4">
+        <Col>
+          <h2>Google Places Autocomplete</h2>
+          <SearchBar />
+        </Col>
+      </Row>
+      <Row className="my-4">
+        <Col>
+          <Map />
+        </Col>
+      </Row>
+    </Container>
   );
-}
+};
 
 export default App;
